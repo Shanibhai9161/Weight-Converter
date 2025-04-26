@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weight Converter</h1>
+        <div class="input-group">
+            <label for="value">Value</label>
+            <input type="number" id="value" placeholder="Enter weight in kg" step="0.01" required>
+        </div>
+        <div class="input-group">
+            <label for="fromUnit">Unit</label>
+            <select id="fromUnit" required>
+                <option value="kg">Kilograms</option>
+                <option value="g">Grams</option>
+                <option value="lb">Pounds</option>
+                <option value="oz">Ounces</option>
+            </select>
+</div>
+        <div class="input-group">
+            <label for="toUnit">To</label>
+            <select id="toUnit" required>
+                <option value="kg">Kilograms</option>
+                <option value="g">Grams</option>
+                <option value="lb">Pounds</option>
+                <option value="oz">Ounces</option>
+            </select>
+        </div>
+      <button onclick="convertWeight()">Convert</button>
+        <div class="result" id="result"></div>
+        
+
+    </div>
+</body>
+<script src="script.js"></script>
+<!-- 
+    <script>
+            function convertWeight() {
+                const value = parseFloat(document.getElementById('value').value);
+                const fromUnit = document.getElementById('fromUnit').value;
+                const toUnit = document.getElementById('toUnit').value;
+                let result;
+
+                if (fromUnit === 'kg') {
+                    if (toUnit === 'g') result = value * 1000;
+                    else if (toUnit === 'lb') result = value * 2.20462;
+                    else if (toUnit === 'oz') result = value * 35.274;
+                    else result = value; // kg to kg
+                } else if (fromUnit === 'g') {
+                    if (toUnit === 'kg') result = value / 1000;
+                    else if (toUnit === 'lb') result = value / 453.592;
+                    else if (toUnit === 'oz') result = value / 28.3495;
+                    else result = value; // g to g
+                } else if (fromUnit === 'lb') {
+                    if (toUnit === 'kg') result = value / 2.20462;
+                    else if (toUnit === 'g') result = value * 453.592;
+                    else if (toUnit === 'oz') result = value * 16;
+                    else result = value; // lb to lb
+                } else if (fromUnit === 'oz') {
+                    if (toUnit === 'kg') result = value / 35.274;
+                    else if (toUnit === 'g') result = value * 28.3495;
+                    else if (toUnit === 'lb') result = value / 16;
+                    else result = value; // oz to oz
+                }
+
+                document.getElementById('result').innerText = `Result: ${result} ${toUnit}`;
+            }
+</script> -->
+<!-- </html> --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Weight Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weight ⚖ Converter</h1>
+        <div class="input-group">
+            <label for="value">Value</label>
+            <input type="number" class="value" id="value" placeholder="Enter weight value" step="0.01">
+        </div>
+        
+        <div class="input-group">
+            <label for="fromUnit">From Unit</label>
+            <select id="fromUnit">
+                <option value="kg">Kilograms (kg)</option>
+                <option value="lb">Pounds (lb)</option>
+                <option value="oz">Ounces (oz)</option>
+                <option value="g">Grams (g)</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label for="toUnit">To Unit</label>
+            <select id="toUnit">
+                <option value="lb">Pounds (lb)</option>
+                <option value="kg">Kilograms (kg)</option>
+                <option value="oz">Ounces (oz)</option>
+                <option value="g">Grams (g)</option>
+            </select>
+        </div>
+        
+        <button onclick="convertWeight()">Convert</button>
+        
+        <div class="result" id="result"></div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
